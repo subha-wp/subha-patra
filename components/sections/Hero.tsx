@@ -3,13 +3,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Brain, Code, Smartphone } from "lucide-react";
-import FloatingLaptop from "@/components/FloatingLaptop";
+
+import ModelViewer from "../ModelViewer";
 
 export default function Hero() {
   return (
     <section id="about" className="min-h-screen pt-16 flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,14 +49,10 @@ export default function Hero() {
               </Button>
             </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="hidden lg:block"
-          >
-            <FloatingLaptop />
-          </motion.div>
+          <div className="hidden lg:block ">
+            {/* <FloatingLaptop /> */}
+            <ModelViewer />
+          </div>
         </div>
       </div>
     </section>
