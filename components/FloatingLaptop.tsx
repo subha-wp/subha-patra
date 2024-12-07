@@ -6,8 +6,10 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { motion } from "framer-motion-3d";
 import { useRef } from "react";
 
+import { ThreeElements } from "@react-three/fiber";
+
 function Laptop() {
-  const meshRef = useRef();
+  const meshRef = useRef<ThreeElements["mesh"]>(null);
 
   return (
     <motion.mesh
